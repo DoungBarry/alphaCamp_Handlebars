@@ -16,9 +16,12 @@ app.set('view engine', 'handlebars')
 // routes setting
 app.get('/', (req, res) => {
 
-  // res.send('')
-  //將這邊的ＨＴＭＬ內榮移置到index.handlebars 
+  // res.send('原本的ＨＴＭＬ內容移轉到~~~/views/index.handlebars')
+
+
   res.render('index')
+
+  // Render 是表示view 對bowser 渲染畫面 .  檔案來自於 index.handlebars
 
 })
 
