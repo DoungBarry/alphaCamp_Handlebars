@@ -3,6 +3,16 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+const expHandlebars = require('express-handlebars')
+
+
+// 設定 setting template engine -express-handlebars 
+
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
+app.set('view engine', 'handlebars')
+
+
+
 // routes setting
 app.get('/', (req, res) => {
   res.send(`<h1>Create your own server with Node.js</h1>
